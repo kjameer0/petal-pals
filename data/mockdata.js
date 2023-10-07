@@ -1,5 +1,4 @@
 import { createBounty } from "./dataClasses";
-
 const treatWater = "Treat polluted water in our neighborhood!";
 const plantTrees = "Plant trees in our community!";
 const recycle = "Help set up recycling centers";

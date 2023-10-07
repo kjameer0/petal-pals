@@ -13,9 +13,13 @@ export function createBounty(
     status,
     postDate,
     location,
-
     completed,
     description,
     email
   };
+}
+export function createCompany(name, completedNum, email, tier) {
+  return  {
+    name, completedNum, email, tier
+  }
 }

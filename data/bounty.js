@@ -1,5 +1,4 @@
-{
-  "requests": [
+export const bounties = [
     {
       "title": "Let's Grow Together! Help Us Create Green Havens in Our Neighborhood.",
       "description": "We're seeking volunteers to join us in planting trees in various areas across our community. These trees will not only enhance our environment but also combat air pollution and provide much-needed shade in our neighborhoods. Your participation will make our community a healthier and greener place to live.",
@@ -253,4 +252,4 @@
       "email": "clean.air@example.com"
     }
   ]
-}
+
