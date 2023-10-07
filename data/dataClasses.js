@@ -15,11 +15,15 @@ export function createBounty(
     location,
     completed,
     description,
-    email
+    email,
   };
 }
-export function createCompany(name, completedNum, email, tier) {
-  return  {
-    name, completedNum, email, tier
-  }
+export function createCompany(name, completedNum, email, tier, address) {
+  return {
+    name,
+    completedNum,
+    email,
+    tier,
+    address,
+  };
 }
