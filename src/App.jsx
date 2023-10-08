@@ -25,6 +25,17 @@ function App() {
         <NavBar />
         <Outlet />
       </ThemeProvider>
+import { bountiesWithRequirements } from '../data/bounty';
+import { Sidebar } from './component/Sidebar/Sidebar';
+function App() {
+  return (
+    <StyledEngineProvider injectFirst>
+      <NavBar />
+      <div className='flex-container'>
+        <Sidebar />
+        <ProjectCard data={bountiesWithRequirements[0]} />
+      </div>
+      <Outlet />
     </StyledEngineProvider>
   );
 }

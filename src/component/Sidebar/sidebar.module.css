@@ -1,0 +1,28 @@
+@import url('/src/App.css');
+
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+
+    width: 440px;
+    height: 611px;
+    flex-shrink: 0;
+
+    border-radius: 5px;
+    border: 0.3px solid var(--gray-400, #9CA3AF);
+    background: #FFF;
+}
+
+.formItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.formItem label {
+    display: block;
+    font-weight: bold;
+}
