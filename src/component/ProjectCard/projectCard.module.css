@@ -1,11 +1,8 @@
 @import url('/src/App.css');
-.main {
+.cardWrapper {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 6px;
-}
-
-.cardTitle {
-  display: flex;
-  justify-content: space-between;
+  /* background-color: red; */
+  max-width: unset;
 }
