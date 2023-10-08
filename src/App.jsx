@@ -3,6 +3,9 @@ import './App.css';
 import NavBar from './component/NavBar/NavBar';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {Sidebar} from './component/Sidebar/sidebar.jsx'
+import Projects from './pages/Projects';
+
 export const themeOptions = createTheme({
   palette: {
     mode: 'light',
@@ -18,24 +21,20 @@ export const themeOptions = createTheme({
   },
 });
 
+
+
 function App() {
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={themeOptions}>
-        <NavBar />
-        <Outlet />
-      </ThemeProvider>
-import { bountiesWithRequirements } from '../data/bounty';
-import { Sidebar } from './component/Sidebar/Sidebar';
-function App() {
-  return (
-    <StyledEngineProvider injectFirst>
+    <ThemeProvider theme={themeOptions}>
+
       <NavBar />
       <div className='flex-container'>
         <Sidebar />
-        <ProjectCard data={bountiesWithRequirements[0]} />
+        <Projects />
       </div>
       <Outlet />
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 }

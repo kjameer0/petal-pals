@@ -3,18 +3,18 @@
 .sidebarContainer {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
     padding: 0;
+    padding-left: 10px;
     margin: 10px;
+    margin-top: 20px;
     overflow: hidden;
-
-    width: 440px;
+    width: 300px;
     height: 611px;
     flex-shrink: 0;
-
     border-radius: 5px;
     border: 0.3px solid var(--gray-400, #9CA3AF);
     background: #FFF;
+    transform: scale(1.05);
 }
 
 .formItem {
@@ -25,4 +25,8 @@
 .formItem label {
     display: block;
     font-weight: bold;
+}
+.textInput {
+   padding: 5px;
+   font-size: 14px;
 }

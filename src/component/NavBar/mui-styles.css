@@ -4,3 +4,6 @@
 .MuiButton-root:hover {
   /* background-color: red; */
 }
+.MuiTypography-h5 {
+  font-size: 20px;
+}

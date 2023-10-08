@@ -56,23 +56,25 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'block', lg:'block', color: 'black' },
+                display: { xs: 'block', md: 'block', lg: 'block', color: 'black' },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <MenuItem
                   key={page}
                   className={styles['MuiButton-root']}
                   onClick={handleCloseNavMenu}
                 >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, display: 'block' }}>
+            {pages.map((page, index) => (
+              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, display: 'block', color: index === 0 ? '#28844B !important' : 'black'}}>
                 {page}
               </Button>
             ))}

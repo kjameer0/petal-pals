@@ -35,7 +35,11 @@ export default function ProjectCard({ data }) {
     data;
 
   const [expanded, setExpanded] = React.useState(false);
-
+function setColor(text) {
+  if(text === 'available') return '#DBEFD8'
+  if(text === 'taken') return '#f0a5b4'
+  if(text === 'complete') return '#f7efd2'
+}
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -44,12 +48,13 @@ export default function ProjectCard({ data }) {
       <div className={styles['titleButtonWrapper']}>
         <div className={styles['titleWrapper']}>
           <CardHeader
+          sx={{fontSize: '20px !important'}}
             className={styles['titleText']}
             title={title}
             subheader={'Date Posted: ' + requested_date}
           />
           <span className={styles.pill}>{'New York, NY ' + location}</span>
-          <span className={`${styles.pill} ${styles.status}`}>{status}</span>
+          <span className={`${styles.pill} ${styles.status}`} style={{backgroundColor: setColor(status)}}>{status}</span>
         </div>
         <div className={styles.detailsButtonWrapper}>
           <CardActions disableSpacing>
