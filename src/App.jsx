@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { useState } from 'react';
 import { Outlet } from 'react-router';
 import './App.css';
