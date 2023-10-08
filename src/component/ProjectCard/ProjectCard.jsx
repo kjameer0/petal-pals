@@ -79,7 +79,14 @@ export default function ProjectCard({ data }) {
             ))}
           </ul>
         </CardContent>
+        <Button
+      className={`${styles.detailsButton} ${styles.apply}`}
+      sx={{ background: theme.palette.primary.main }}
+    >
+      Apply to Project
+    </Button>
       </Collapse>
+
     </Card>
   );
 }

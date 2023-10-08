@@ -28,6 +28,11 @@
   height: 50px;
   background-color: lightgreen;
 }
+.apply {
+  position: relative;
+  left: 935px;
+  margin-bottom: 10px;
+}
 .detailsButtonWrapper {
   display: flex;
   justify-content: center;
