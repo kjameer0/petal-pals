@@ -16,12 +16,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import styles from '/src/component/ProjectCard/projectCard.module.css';
 import PropTypes from 'prop-types';
+import { Button } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
   transition: theme.transitions.create('transform', {
     duration: theme.transitions.duration.shortest,
@@ -29,6 +30,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function ProjectCard({ data }) {
+  const theme = useTheme();
   const { title, description, requested_date, completed_date, location, status, requirements } =
     data;
 
@@ -39,39 +41,52 @@ export default function ProjectCard({ data }) {
   };
   return (
     <Card className={styles.cardWrapper} sx={{ maxWidth: 345 }}>
-      <div className="titleWrapper">
-        <CardHeader title={title} subheader={'Date Posted: ' + requested_date} />
-        <CardContent>
-          <div>
-            <Typography variant="body2" color="text.secondary">
-              {location}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {status}
-            </Typography>
-          </div>
-        </CardContent>
+      <div className={styles['titleButtonWrapper']}>
+        <div className={styles['titleWrapper']}>
+          <CardHeader
+            className={styles['titleText']}
+            title={title}
+            subheader={'Date Posted: ' + requested_date}
+          />
+          <span className={styles.pill}>{'New York, NY ' + location}</span>
+          <span className={`${styles.pill} ${styles.status}`}>{status}</span>
+        </div>
+        <div className={styles.detailsButtonWrapper}>
+          <CardActions disableSpacing>
+            <ExpandMore expand={expanded} onClick={handleExpandClick} aria-label="show more">
+              <Button
+                className={styles.detailsButton}
+                sx={{ background: theme.palette.primary.main }}
+              >
+                More Details <ExpandMoreIcon />
+              </Button>
+            </ExpandMore>
+          </CardActions>
+        </div>
       </div>
-      <CardActions disableSpacing>
-        <Typography></Typography>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
+      <CardContent>
+        <div></div>
+      </CardContent>
+
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography>
+          <p>About the role:</p>
+          <p>{description}</p>
+          <p>Responsibilites:</p>
+          <ul>
+            {requirements.map((req) => (
+              <li key={crypto.randomUUID()}>{req}</li>
+            ))}
+          </ul>
         </CardContent>
+        <Button
+      className={`${styles.detailsButton} ${styles.apply}`}
+      sx={{ background: theme.palette.primary.main }}
+    >
+      Apply to Project
+    </Button>
       </Collapse>
+
     </Card>
   );
 }
