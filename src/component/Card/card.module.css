@@ -1,7 +1,9 @@
+@import url('/src/App.css');
 .main {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 6px;
+  background-color: var(--color-main);
 }
 
 .cardTitle {

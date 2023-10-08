@@ -16,10 +16,10 @@ export function Card() {
   return (
     <div className={styles.main}>
       <div className={styles.cardTitle}>
-        <div>
-          <div>{need.title}</div>
-          <div>Category: {need.category}</div>
-        </div>
+        <header>
+          <h2>{need.title}</h2>
+          <span>Category: {need.category}</span>
+        </header>
         <div>
           <div>Posted: {need.requested_date}</div>
           <div>Zipcode: {need.location}</div>
