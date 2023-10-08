@@ -3,6 +3,45 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 6px;
-  /* background-color: red; */
   max-width: unset;
+  min-height: 170px;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+}
+
+.titleButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.titleText{
+  flex-basis: 55%;
+}
+.detailsButton {
+  font-size: 12px;
+  width: 160px;
+  height: 50px;
+  color: white !important;
+}
+.detailsButton:hover {
+  font-size: 12px;
+  width: 160px;
+  height: 50px;
+  background-color: lightgreen;
+}
+.detailsButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailsButtonWrapper > * {
+  height: 100%;
+}
+.pill {
+  margin-left: 20px;
+  background-color: #F6F6F6;
+  padding: 5px;
+  border-radius: 8px;
+}
+.status {
+  background-color: #DBEFD8;
 }

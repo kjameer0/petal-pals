@@ -7,7 +7,7 @@ export const bounties = [
     requested_date: "2023-10-15",
     completed_date: "2024-11-20",
     location: "12345",
-    status: "free",
+    status: "available",
     email: "john.doe@example.com",
   },
   {
@@ -40,7 +40,7 @@ export const bounties = [
     requested_date: "2023-11-10",
     completed_date: "2024-11-30",
     location: "45678",
-    status: "free",
+    status: "available",
     email: "recycler@example.com",
   },
   {
@@ -73,7 +73,7 @@ export const bounties = [
     requested_date: "2023-12-15",
     completed_date: "2024-12-20",
     location: "78901",
-    status: "free",
+    status: "available",
     email: "donate.green@example.com",
   },
   {
@@ -105,7 +105,7 @@ export const bounties = [
     requested_date: "2023-12-10",
     completed_date: "2024-10-30",
     location: "23456",
-    status: "free",
+    status: "available",
     email: "ocean.cleanup@example.com",
   },
   {
@@ -125,7 +125,7 @@ export const bounties = [
     requested_date: "2023-11-25",
     completed_date: "2024-11-10",
     location: "45678",
-    status: "free",
+    status: "available",
     email: "renewable.workshop@example.com",
   },
   {
@@ -157,7 +157,7 @@ export const bounties = [
     requested_date: "2023-11-30",
     completed_date: "2024-12-20",
     location: "78901",
-    status: "free",
+    status: "available",
     email: "park.volunteer@example.com",
   },
   {
@@ -188,7 +188,7 @@ export const bounties = [
     requested_date: "2023-11-15",
     completed_date: "2024-10-15",
     location: "23456",
-    status: "free",
+    status: "available",
     email: "green.roof@example.com",
   },
   {
@@ -219,7 +219,7 @@ export const bounties = [
     requested_date: "2023-11-20",
     completed_date: "2024-10-30",
     location: "56789",
-    status: "free",
+    status: "available",
     email: "animal.shelter.volunteer@example.com",
   },
   {
@@ -251,7 +251,7 @@ export const bounties = [
     requested_date: "2023-11-10",
     completed_date: "2024-11-05",
     location: "89012",
-    status: "free",
+    status: "available",
     email: "food.bank.volunteer@example.com",
   },
   {
@@ -283,7 +283,7 @@ export const bounties = [
     requested_date: "2023-11-25",
     completed_date: "2024-10-15",
     location: "12345",
-    status: "free",
+    status: "available",
     email: "habitat.restoration@example.com",
   },
   {
@@ -306,7 +306,7 @@ const projects1 = [
     requested_date: '2023-10-15',
     completed_date: '2024-11-20',
     location: '12345',
-    status: 'free',
+    status: 'available',
     email: 'john.doe@example.com',
     requirements: [
       "Participate in tree planting events",
@@ -351,7 +351,7 @@ const projects1 = [
     requested_date: '2023-11-10',
     completed_date: '2024-11-30',
     location: '45678',
-    status: 'free',
+    status: 'available',
     email: 'recycler@example.com',
     requirements: [
       "Collect recyclable materials from designated locations",
@@ -398,7 +398,7 @@ const projects2 =  [
     requested_date: '2023-12-15',
     completed_date: '2024-12-20',
     location: '78901',
-    status: 'free',
+    status: 'available',
     email: 'donate.green@example.com',
     requirements: [
       "Contribute to the green space construction fund",
@@ -460,7 +460,7 @@ const projects3 = [
     requested_date: '2023-12-15',
     completed_date: '2024-12-20',
     location: '78901',
-    status: 'free',
+    status: 'available',
     email: 'donate.green@example.com',
     requirements: [
       "Contribute to the green space construction fund",
@@ -523,7 +523,7 @@ const projects4 = [
     requested_date: '2023-11-30',
     completed_date: '2024-12-20',
     location: '78901',
-    status: 'free',
+    status: 'available',
     email: 'park.volunteer@example.com',
     requirements: [
       "Participate in park cleanup activities",
@@ -570,7 +570,7 @@ const projects5 = [
     requested_date: '2023-11-15',
     completed_date: '2024-10-15',
     location: '23456',
-    status: 'free',
+    status: 'available',
     email: 'green.roof@example.com',
     requirements: [
       "Prepare rooftop gardens and green spaces",
@@ -615,7 +615,7 @@ const projects5 = [
     requested_date: '2023-11-20',
     completed_date: '2024-10-30',
     location: '56789',
-    status: 'free',
+    status: 'available',
     email: 'animal.shelter.volunteer@example.com',
     requirements: [
       "Provide care and attention to shelter animals",
@@ -663,7 +663,7 @@ const projects6 =  [
     requested_date: '2023-11-10',
     completed_date: '2024-11-05',
     location: '89012',
-    status: 'free',
+    status: 'available',
     email: 'food.bank.volunteer@example.com',
     requirements: [
       "Sort and categorize donated food items",
@@ -711,7 +711,7 @@ const projects7 = [
     requested_date: '2023-11-25',
     completed_date: '2024-10-15',
     location: '12345',
-    status: 'free',
+    status: 'available',
     email: 'habitat.restoration@example.com',
     requirements: [
       "Identify local wildlife species and their habitat needs",
@@ -739,4 +739,3 @@ const projects7 = [
 
 export const bountiesWithRequirements = projects1.concat(projects2,projects3,projects4,projects5,projects6,projects7)
 
-console.log(bountiesWithRequirements[0])
